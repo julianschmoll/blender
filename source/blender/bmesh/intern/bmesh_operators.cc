@@ -1602,7 +1602,7 @@ bool BMO_op_vinitf(BMesh *bm, BMOperator *op, const int flag, const char *_fmt, 
 {
   //  BMOpDefine *def;
   char *opname, *ofmt, *fmt;
-  char slot_name[64] = {0};
+  char slot_name[256] = {0};
   int i, type;
   bool noslot, state;
 

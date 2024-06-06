@@ -137,6 +137,8 @@ typedef struct IDPropertyData {
   ListBase group;
   /** NOTE: a `double` is written into two 32bit integers. */
   int val, val2;
+   /** 256-bit value represented as an array of 32 bytes (256 bits). */
+  uint8_t val256[32];
 } IDPropertyData;
 
 typedef struct IDProperty {
@@ -151,7 +153,7 @@ typedef struct IDProperty {
   /** #IDP_FLAG_GHOST and others. */
   short flag;
   /** Size matches #MAX_IDPROP_NAME. */
-  char name[64];
+  char name[256];
 
   char _pad0[4];
 
@@ -173,8 +175,8 @@ typedef struct IDProperty {
   IDPropertyUIData *ui_data;
 } IDProperty;
 
-#define MAX_IDPROP_NAME 64
-#define DEFAULT_ALLOC_FOR_NULL_STRINGS 64
+#define MAX_IDPROP_NAME 256
+#define DEFAULT_ALLOC_FOR_NULL_STRINGS 256
 
 /** #IDProperty.type */
 typedef enum eIDPropertyType {
@@ -423,7 +425,7 @@ enum {
  */
 
 /* 2 characters for ID code and 64 for actual name */
-#define MAX_ID_NAME 66
+#define MAX_ID_NAME 258
 
 /** #ID_Runtime_Remap.status */
 enum {
@@ -464,7 +466,7 @@ typedef struct ID {
   struct AssetMetaData *asset_data;
 
   /** MAX_ID_NAME. */
-  char name[66];
+  char name[258];
   /**
    * LIB_... flags report on status of the data-block this ID belongs to
    * (persistent, saved to and read from .blend).
@@ -596,7 +598,7 @@ typedef struct LibraryWeakReference {
   char library_filepath[1024];
 
   /** MAX_ID_NAME. May be different from the current local ID name. */
-  char library_id_name[66];
+  char library_id_name[258];
 
   char _pad[2];
 } LibraryWeakReference;

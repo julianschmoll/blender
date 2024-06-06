@@ -55,12 +55,12 @@ typedef struct MaskParent {
    * Entity of parent to which parenting happened
    * in case of parenting to movie tracking data contains name of layer.
    */
-  char parent[64];
+  char parent[256];
   /**
    * Sub-entity of parent to which parenting happened
    * in case of parenting to movie tracking data contains name of track.
    */
-  char sub_parent[64];
+  char sub_parent[256];
   /**
    * Track location at the moment of parenting,
    * stored in mask space.
@@ -139,7 +139,7 @@ typedef struct MaskLayer {
   struct MaskLayer *next, *prev;
 
   /** Name of the mask layer (64 = MAD_ID_NAME - 2). */
-  char name[64];
+  char name[256];
 
   /** List of splines which defines this mask layer. */
   ListBase splines;

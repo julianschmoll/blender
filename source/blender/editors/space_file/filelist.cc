@@ -194,7 +194,7 @@ struct FileListFilter {
   uint64_t filter;
   uint64_t filter_id;
   char filter_glob[FILE_MAXFILE];
-  char filter_search[66]; /* + 2 for heading/trailing implicit '*' wildcards. */
+  char filter_search[258]; /* + 2 for heading/trailing implicit '*' wildcards. */
   short flags;
 
   FileAssetCatalogFilterSettingsHandle *asset_catalog_filter;
@@ -854,7 +854,7 @@ static bool is_filtered_asset(FileListInternEntry *file, FileListFilter *filter)
   }
 
   /* filter->filter_search contains "*the search text*". */
-  char filter_search[66]; /* sizeof(FileListFilter::filter_search) */
+  char filter_search[258]; /* sizeof(FileListFilter::filter_search) */
   const size_t string_length = STRNCPY_RLEN(filter_search, filter->filter_search);
 
   /* When doing a name comparison, get rid of the leading/trailing asterisks. */

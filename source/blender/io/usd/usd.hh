@@ -196,9 +196,9 @@ void USD_CacheReader_free(CacheReader *reader);
 struct USDHook {
 
   /* Identifier used for class name. */
-  char idname[64];
+  char idname[256];
   /* Identifier used as label. */
-  char name[64];
+  char name[256];
   /* Short help/description. */
   char description[1024]; /* #RNA_DYN_DESCR_MAX */
 

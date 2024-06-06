@@ -207,7 +207,7 @@ typedef struct Object {
   /** Can be vertex indices. */
   int par1, par2, par3;
   /** String describing sub-object info, `MAX_ID_NAME - 2`. */
-  char parsubstr[64];
+  char parsubstr[256];
   struct Object *parent, *track;
   /* Proxy pointer are deprecated, only kept for conversion to liboverrides. */
   struct Object *proxy DNA_DEPRECATED;

@@ -204,7 +204,7 @@ struct uiLayoutItemBx {
 struct uiLayoutItemPanelHeader {
   uiLayout litem;
   PointerRNA open_prop_owner;
-  char open_prop_name[64];
+  char open_prop_name[256];
 };
 
 struct uiLayoutItemPanelBody {

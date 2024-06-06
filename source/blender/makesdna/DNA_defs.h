@@ -47,7 +47,7 @@
 #include "../blenlib/BLI_sys_types.h" /* needed for int64_t only! */
 
 /* non-id name variables should use this length */
-#define MAX_NAME 64
+#define MAX_NAME 256
 
 /* #DNA_DEFINE_CXX_METHODS is used to define C++ methods which are needed for proper/safe resource
  * management, making unsafe (from an ownership perspective: i.e. pointers which sometimes needs to

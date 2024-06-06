@@ -72,7 +72,7 @@ static void ui_imageuser_slot_menu(bContext * /*C*/, uiLayout *layout, void *ima
 
   int slot_id;
   LISTBASE_FOREACH_INDEX (RenderSlot *, slot, &image->renderslots, slot_id) {
-    char str[64];
+    char str[256];
     if (slot->name[0] != '\0') {
       STRNCPY(str, slot->name);
     }
@@ -592,7 +592,7 @@ static void uiblock_layer_pass_buttons(uiLayout *layout,
 
   /* menu buts */
   if (render_slot) {
-    char str[64];
+    char str[256];
     RenderSlot *slot = BKE_image_get_renderslot(image, *render_slot);
     if (slot && slot->name[0] != '\0') {
       STRNCPY(str, slot->name);

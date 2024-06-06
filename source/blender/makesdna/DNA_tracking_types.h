@@ -110,7 +110,7 @@ typedef struct MovieTrackingTrack {
   struct MovieTrackingTrack *next, *prev;
 
   /** MAX_NAME. */
-  char name[64];
+  char name[256];
 
   /* ** settings ** */
 
@@ -213,7 +213,7 @@ typedef struct MovieTrackingPlaneTrack {
   struct MovieTrackingPlaneTrack *next, *prev;
 
   /** MAX_NAME. */
-  char name[64];
+  char name[256];
 
   /**
    * Array of point tracks used to define this plane.

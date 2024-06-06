@@ -248,7 +248,7 @@ typedef struct SoftBody {
    * rather find them by name tag to find it -> jow20090613.
    * MAX_VGROUP_NAME
    */
-  char namedVG_Spring_K[64];
+  char namedVG_Spring_K[256];
 
   /* baking */
   char _pad1[6];

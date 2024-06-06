@@ -584,7 +584,7 @@ struct TransInfo {
   float spacemtx[3][3];
   float spacemtx_inv[3][3];
   /** name of the current space, MAX_NAME. */
-  char spacename[64];
+  char spacename[256];
 
   /*************** NEW STUFF *********************/
   /** event type used to launch transform. */

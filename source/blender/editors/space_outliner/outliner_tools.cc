@@ -802,7 +802,7 @@ struct MergedSearchData {
 static void merged_element_search_fn_recursive(
     const ListBase *tree, short tselem_type, short type, const char *str, uiSearchItems *items)
 {
-  char name[64];
+  char name[256];
   int iconid;
 
   LISTBASE_FOREACH (TreeElement *, te, tree) {

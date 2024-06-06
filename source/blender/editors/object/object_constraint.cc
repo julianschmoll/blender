@@ -183,7 +183,7 @@ static char *buildmenu_pyconstraints(Main *bmain, Text *con_text, int *pyconinde
   DynStr *pupds = BLI_dynstr_new();
   Text *text;
   char *str;
-  char buf[64];
+  char buf[256];
   int i;
 
   /* add title first */

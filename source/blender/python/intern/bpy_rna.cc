@@ -982,7 +982,7 @@ static PyObject *pyrna_prop_str(BPy_PropertyRNA *self)
   PointerRNA ptr;
   const char *name;
   const char *type_id = nullptr;
-  char type_lower[64];
+  char type_lower[256];
   char type_count[16];
   int type;
 

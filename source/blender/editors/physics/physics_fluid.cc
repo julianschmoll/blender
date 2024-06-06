@@ -169,7 +169,7 @@ static bool fluid_validatepaths(FluidJob *job, ReportList *reports)
 
   /* We do not accept empty paths, they can end in random places silently, see #51176. */
   if (fds->cache_directory[0] == '\0') {
-    char cache_name[64];
+    char cache_name[256];
     BKE_fluid_cache_new_name_for_current_session(sizeof(cache_name), cache_name);
     BKE_modifier_path_init(fds->cache_directory, sizeof(fds->cache_directory), cache_name);
     BKE_reportf(reports,
@@ -187,7 +187,7 @@ static bool fluid_validatepaths(FluidJob *job, ReportList *reports)
   /* We change path to some presumably valid default value, but do not allow bake process to
    * continue, this gives user chance to set manually another path. */
   if (!dir_exists) {
-    char cache_name[64];
+    char cache_name[256];
     BKE_fluid_cache_new_name_for_current_session(sizeof(cache_name), cache_name);
     BKE_modifier_path_init(fds->cache_directory, sizeof(fds->cache_directory), cache_name);
 

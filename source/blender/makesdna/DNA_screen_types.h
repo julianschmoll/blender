@@ -153,7 +153,7 @@ typedef struct Panel {
   struct uiLayout *layout;
 
   /** Defined as UI_MAX_NAME_STR. */
-  char panelname[64];
+  char panelname[256];
   /** Panel name is identifier for restoring location. */
   char *drawname;
   /** Offset within the region. */
@@ -295,7 +295,7 @@ typedef struct uiList { /* some list UI data need to be saved in file */
   struct uiListType *type;
 
   /** Defined as UI_MAX_NAME_STR. */
-  char list_id[128];
+  char list_id[256];
 
   /** How items are laid out in the list. */
   int layout_type;
@@ -308,7 +308,7 @@ typedef struct uiList { /* some list UI data need to be saved in file */
 
   /* Filtering data. */
   /** Defined as UI_MAX_NAME_STR. */
-  char filter_byname[128];
+  char filter_byname[256];
   int filter_flag;
   int filter_sort_flag;
 
@@ -332,7 +332,7 @@ typedef struct uiPreview {
   struct uiPreview *next, *prev;
 
   /** Defined as #UI_MAX_NAME_STR. */
-  char preview_id[64];
+  char preview_id[256];
   short height;
   char _pad1[6];
 } uiPreview;

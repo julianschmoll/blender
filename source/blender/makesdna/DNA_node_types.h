@@ -123,7 +123,7 @@ typedef struct bNodeSocket {
   char identifier[64];
 
   /** MAX_NAME. */
-  char name[64];
+  char name[256];
 
   /** Only used for the Image and OutputFile nodes, should be removed at some point. */
   void *storage;

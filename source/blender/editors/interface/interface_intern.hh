@@ -631,7 +631,7 @@ struct uiBlock {
    * Display device name used to display this block,
    * used by color widgets to transform colors from/to scene linear.
    */
-  char display_device[64];
+  char display_device[256];
 
   PieMenuData pie_data;
 };
@@ -900,7 +900,7 @@ struct uiPopupBlockHandle {
   int grab_xy_prev[2];
   /* #endif */
 
-  char menu_idname[64];
+  char menu_idname[256];
 };
 
 /* -------------------------------------------------------------------- */

@@ -230,7 +230,7 @@ static int brush_add_gpencil_exec(bContext *C, wmOperator * /*op*/)
     eGPBrush_Presets preset = gpencil_get_brush_preset_from_tool(tool, mode);
 
     /* Capitalize Brush name first letter using the tool name. */
-    char name[64];
+    char name[256];
     STRNCPY(name, tool->runtime->data_block);
     BLI_str_tolower_ascii(name, sizeof(name));
     name[0] = BLI_toupper_ascii(name[0]);

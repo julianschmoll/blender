@@ -29,7 +29,7 @@ class AssetIdentifier;
  */
 typedef struct AssetTag {
   struct AssetTag *next, *prev;
-  char name[64]; /* MAX_NAME */
+  char name[256]; /* MAX_NAME */
 } AssetTag;
 
 #
@@ -72,7 +72,7 @@ typedef struct AssetMetaData {
    * reconstruction of asset catalogs in the unfortunate case that the mapping from catalog UUID to
    * catalog path is lost. The catalog's simple name is copied to #catalog_simple_name whenever
    * #catalog_id is updated. */
-  char catalog_simple_name[64]; /* MAX_NAME */
+  char catalog_simple_name[256]; /* MAX_NAME */
 
   /** Optional name of the author for display in the UI. Dynamic length. */
   char *author;

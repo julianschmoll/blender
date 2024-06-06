@@ -136,7 +136,7 @@ struct ImBufAnim {
   struct ImBufAnimIndex *curr_idx[IMB_TC_MAX_SLOT];
 
   char colorspace[64];
-  char suffix[64]; /* MAX_NAME - multiview */
+  char suffix[256]; /* MAX_NAME - multiview */
 
   struct IDProperty *metadata;
 };

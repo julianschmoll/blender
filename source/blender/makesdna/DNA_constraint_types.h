@@ -423,7 +423,7 @@ typedef struct bChildOfConstraint {
   /** Parent-inverse matrix to use. */
   float invmat[4][4];
   /** String to specify a sub-object target, `MAX_ID_NAME - 2`. */
-  char subtarget[64];
+  char subtarget[256];
 } bChildOfConstraint;
 
 /* Generic Transform->Transform Constraint */

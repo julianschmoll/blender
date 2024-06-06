@@ -243,7 +243,7 @@ static int unpack_all_invoke(bContext *C, wmOperator *op, const wmEvent * /*even
   Main *bmain = CTX_data_main(C);
   uiPopupMenu *pup;
   uiLayout *layout;
-  char title[64];
+  char title[256];
   int count = 0;
 
   count = BKE_packedfile_count_all(bmain);

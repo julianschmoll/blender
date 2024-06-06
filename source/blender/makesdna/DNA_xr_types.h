@@ -129,7 +129,7 @@ typedef struct XrActionMapBinding {
   struct XrActionMapBinding *next, *prev;
 
   /** Unique name. */
-  char name[64]; /* MAX_NAME */
+  char name[256]; /* MAX_NAME */
 
   /** OpenXR interaction profile path. */
   char profile[256];
@@ -157,7 +157,7 @@ typedef struct XrActionMapItem {
   struct XrActionMapItem *next, *prev;
 
   /** Unique name. */
-  char name[64]; /* MAX_NAME */
+  char name[256]; /* MAX_NAME */
   /** Type. */
   char type; /** eXrActionType */
   char _pad[7];

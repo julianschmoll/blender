@@ -28,7 +28,7 @@ struct DRW_AttributeRequest {
   eCustomDataType cd_type;
   int layer_index;
   blender::bke::AttrDomain domain;
-  char attribute_name[64];
+  char attribute_name[256];
 };
 
 struct DRW_Attributes {

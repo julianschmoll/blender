@@ -95,9 +95,9 @@ struct KeyingSetInfo {
 
   /* info */
   /* identifier used for class name, which KeyingSet instances reference as "Type-info Name" */
-  char idname[64];
+  char idname[256];
   /* identifier so that user can hook this up to a KeyingSet (used as label). */
-  char name[64];
+  char name[256];
   /* short help/description. */
   char description[1024]; /* #RNA_DYN_DESCR_MAX */
   /* keying settings */

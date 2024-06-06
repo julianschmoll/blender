@@ -110,7 +110,7 @@ TEST(listbase, FindLinkFromStringOrPointer)
 {
   struct TestLink {
     TestLink *next, *prev;
-    char name[64];
+    char name[256];
     const void *ptr;
   };
 

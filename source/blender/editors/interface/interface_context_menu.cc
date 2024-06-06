@@ -391,7 +391,7 @@ static void ui_but_user_menu_add(bContext *C, uiBut *but, bUserMenu *um)
     if (drawstr[0] == '\0') {
       /* Hard code overrides for generic operators. */
       if (UI_but_is_tool(but)) {
-        char idname[64];
+        char idname[256];
         RNA_string_get(but->opptr, "name", idname);
 #ifdef WITH_PYTHON
         {
